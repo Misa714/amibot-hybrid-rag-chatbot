@@ -222,4 +222,8 @@ python3 tests/test_estres.py
 
 ## Licencia
 
-Este proyecto fue desarrollado como parte de una práctica profesional. El código fuente se comparte con fines educativos y de portafolio. Los datos de ejemplo incluidos son ficticios.
+Copyright (c) 2026 Misael (Misa714). Todos los derechos reservados.
+
+Este repositorio y su código fuente están publicados únicamente con fines de portafolio técnico y evaluación profesional.
+
+Queda estrictamente prohibida la copia, reproducción, modificación, distribución o uso comercial/no comercial de este código fuente sin la autorización previa y por escrito del autor.
