@@ -1,0 +1,13 @@
+{
+  "bases_datos": [
+    "recursos_cientificos"
+  ],
+  "catalogo": [
+    "catalogo_carreras"
+  ],
+  "prestamos": [
+    "renovacion",
+    "devolucion",
+    "multas_bloqueos"
+  ]
+}

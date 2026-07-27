@@ -1,0 +1,46 @@
+# Términos institucionales
+universidad
+koha
+vufind
+amibot
+tesis
+locker
+lockers
+apa
+vancouver
+wifi
+biblioteca
+estudiante
+alumno
+
+# Días de la semana (sin tildes)
+lunes
+martes
+miercoles
+miércoles
+jueves
+viernes
+sabado
+sabados
+sábado
+sábados
+domingo
+domingos
+
+# Términos técnicos del dominio bibliotecario
+hemeroteca
+tesistas
+tesista
+scopus
+ebsco
+proquest
+catalogo
+prestamo
+devolucion
+meson
+computador
+computadores
+sciencedirect
+isbn
+issn
+doi

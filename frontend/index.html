@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmiBot — Hybrid RAG System Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(16px);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p.subtitle {
+            font-size: 16px;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 16px;
+        }
+        .card h3 {
+            font-size: 15px;
+            color: #38bdf8;
+            margin-bottom: 6px;
+        }
+        .card p {
+            font-size: 13px;
+            color: #cbd5e1;
+            line-height: 1.4;
+        }
+        .instruction {
+            background: rgba(79, 70, 229, 0.15);
+            border: 1px solid rgba(79, 70, 229, 0.3);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .instruction-icon {
+            font-size: 24px;
+        }
+        .instruction-text {
+            font-size: 14px;
+            color: #e0e7ff;
+            line-height: 1.5;
+        }
+        footer {
+            margin-top: 32px;
+            font-size: 13px;
+            color: #64748b;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <span class="badge">Demo Interactivo</span>
+    <h1>AmiBot — Hybrid RAG Chatbot</h1>
+    <p class="subtitle">
+        Sistema enrutador de inteligencia artificial con recuperación híbrida (BM25 + ChromaDB Vectors),
+        guardrails de privacidad PII, telemetría SQLite y cortocircuito de respuestas.
+    </p>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Re-Ranking Híbrido</h3>
+            <p>Combina similitud de palabras clave (BM25) con embeddings vectoriales mediante RRF.</p>
+        </div>
+        <div class="card">
+            <h3>Guardrails & PII</h3>
+            <p>Anonimización automática de RUTs y correos antes del procesamiento semántico.</p>
+        </div>
+        <div class="card">
+            <h3>Cortocircuito RAG</h3>
+            <p>Bypass directo para respuestas estáticas de alta confianza sin consumo innecesario de GPU.</p>
+        </div>
+    </div>
+
+    <div class="instruction">
+        <div class="instruction-text">
+            <strong>¿Cómo probar la demo?</strong><br>
+            Asegúrate de tener el backend corriendo (`uvicorn main:app --reload`) y haz clic en el botón flotante <strong>AmiBot AI</strong> ubicado en la esquina inferior derecha.
+        </div>
+    </div>
+</div>
+
+<footer>
+    AmiBot Portfolio Repository &copy; 2026 — Clean Architecture & Enterprise AI
+</footer>
+
+<!-- Carga del Widget de Chat Demo -->
+<script src="./chat-widget.js"></script>
+</body>
+</html>

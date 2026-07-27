@@ -1,0 +1,12 @@
+{
+  "palabras_castigo": [
+    "multa", "reposición", "reposicion", "pagar",
+    "perder beneficios", "sanción", "sancion"
+  ],
+  "palabras_especificas": [
+    "devolver", "devolucion", "devolución", "entrega", "entregar",
+    "perdi", "perdio", "perdió", "pierdo", "pierde", "pierda", "pierden",
+    "perdido", "dañado", "roto", "mal estado"
+  ],
+  "excepciones": []
+}

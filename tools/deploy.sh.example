@@ -1,0 +1,33 @@
+#!/bin/bash
+# Ejemplo de Script de Despliegue Automático (Local -> Servidor Producción)
+
+KEY_PATH="/path/to/your/ssh_key.pem"
+REMOTE_USER="deploy_user"
+REMOTE_HOST="server.example.edu"
+REMOTE_DIR="/var/www/chatbot_app"
+
+chmod 600 "$KEY_PATH"
+
+echo "[1/4] Sincronizando archivos locales con el servidor..."
+rsync -avz \
+  --exclude 'venv/' \
+  --exclude '__pycache__/' \
+  --exclude 'chroma_db/' \
+  --exclude 'consultas.db' \
+  --exclude 'chroma_hash.txt' \
+  --exclude 'logs/' \
+  --exclude '.git/' \
+  -e "ssh -i $KEY_PATH -o StrictHostKeyChecking=accept-new" \
+  ./ "$REMOTE_USER@$REMOTE_HOST:$REMOTE_DIR/"
+
+echo "[2/4] Actualizando dependencias en el servidor..."
+ssh -i "$KEY_PATH" -o StrictHostKeyChecking=accept-new "$REMOTE_USER@$REMOTE_HOST" << 'EOF'
+  cd /var/www/chatbot_app
+  source venv/bin/activate
+  pip install -r requirements.txt
+EOF
+
+echo "[3/4] Reiniciando servicio systemd en producción..."
+ssh -i "$KEY_PATH" -o StrictHostKeyChecking=accept-new "$REMOTE_USER@$REMOTE_HOST" "sudo systemctl restart chatbot-rag.service"
+
+echo "[4/4] Despliegue finalizado con éxito."

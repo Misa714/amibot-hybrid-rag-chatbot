@@ -1,0 +1,11 @@
+{
+  "extender": "renovacion plazo",
+  "alargar": "renovacion plazo",
+  "estirar": "renovacion plazo",
+  "no alcanzo a ir": "renovacion plazo",
+  "devolver": "devolucion entrega",
+  "entregar": "devolucion entrega",
+  "retirar": "prestamo pedir",
+  "sacar": "prestamo pedir",
+  "llevar": "prestamo pedir"
+}

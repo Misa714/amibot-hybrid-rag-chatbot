@@ -1,0 +1,19 @@
+{
+  "out_of_domain": [
+    "vacacion", "vacaciones",
+    "arancel", "aranceles",
+    "matricula", "matrícula",
+    "beca", "becas", "financiamiento",
+    "admision", "admisión",
+    "inscripcion", "inscripción",
+    "certificado", "certificados",
+    "nota", "notas"
+  ],
+  "ambiguous_single_words": [
+    "medicina", "psicologia", "psicología",
+    "ingenieria", "ingeniería",
+    "derecho", "enfermeria", "enfermería",
+    "tesis", "libro", "libros",
+    "prestamo", "revista", "revistas", "catalogo"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "comida": {
+    "patron": "\\b(pizza|comida|hambre|almuerzo|venden|comedor|cafeter[ií]a|desayuno|completo|sushi|hamburguesa|papas fritas|bebida|cafe|restaurant|menu|vegano|vegetariano)\\b",
+    "respuesta": "En la biblioteca nos enfocamos en lo académico. No vendemos alimentos ni tenemos cafetería."
+  },
+  "deportes": {
+    "patron": "\\b(f[uú]tbol|partido|gan[oó]|juega|pelota|cancha|champions|madrid|colo colo|udechile|tenis|deporte|gimnasio|ejercicio|mundial)\\b",
+    "respuesta": "En la biblioteca no tenemos información sobre deportes. Nuestro enfoque es académico."
+  },
+  "clima": {
+    "patron": "\\b(clima|temperatura|pron[oó]stico|sol|nublado|nieve)\\b",
+    "respuesta": "No tengo información sobre el clima. En la biblioteca nos enfocamos en lo académico."
+  },
+  "entretencion": {
+    "patron": "\\b(pel[ií]cula|serie|netflix|videojuego|juego|m[uú]sica|cancion|concierto|teatro)\\b",
+    "respuesta": "En la biblioteca nos enfocamos en lo académico. No tengo información sobre entretención."
+  },
+  "transporte": {
+    "patron": "\\b(micro|bus|metro|taxi|uber|bicicleta|estacionamiento|auto|combustible)\\b",
+    "respuesta": "No tengo información sobre transporte. En la biblioteca nos enfocamos en lo académico."
+  },
+  "despedida": {
+    "patron": "\\b(adi[oó]s|chao|nos vemos|gracias|hasta luego|chau)\\b",
+    "respuesta": "De nada. Recuerda que estoy aquí si necesitas más ayuda. Que tengas un excelente día."
+  }
+}

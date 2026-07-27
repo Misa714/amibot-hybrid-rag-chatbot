@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  chatbot-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: chatbot_rag_api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - CHATBOT_HOST=0.0.0.0
+      - CHATBOT_PORT=8000
+      - CHATBOT_DB_PATH=/app/data/consultas.db
+      - CHATBOT_KNOWLEDGE_PATH=/app/conocimiento_base_ollama.json
+      - CHATBOT_CHITCHAT_PATH=/app/chitchat_patterns.json
+      - CHATBOT_EMBEDDING_MODEL=paraphrase-multilingual-MiniLM-L12-v2
+      - CHATBOT_OLLAMA_MODEL=llama3.2:1b
+      - CHATBOT_UMBRAL_BAJO=0.45
+      # Configura aquí las credenciales SMTP si deseas habilitar el formulario a humano:
+      - SMTP_SERVER=smtp.gmail.com
+      - SMTP_PORT=587
+      - SMTP_SENDER=noreply@example.edu
+      - SMTP_RECEIVER=soporte@example.edu
+      - SMTP_PASSWORD=
+    volumes:
+      # Volumen para persistir la base de datos sqlite y evitar que se borre con recreaciones del contenedor
+      - chatbot_data:/app/data
+      # Volumen para persistir la base de datos vectorial ChromaDB
+      - chatbot_chroma:/app/chroma_db
+      # Volumen para persistir los archivos de log si el logger escribe localmente
+      - chatbot_logs:/app/logs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+volumes:
+  chatbot_data:
+    driver: local
+  chatbot_chroma:
+    driver: local
+  chatbot_logs:
+    driver: local

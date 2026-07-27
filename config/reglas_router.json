@@ -1,0 +1,83 @@
+[
+  {
+    "intent": "bases_datos",
+    "palabras": ["base de datos", "bases de datos", "scopus", "web of science", "wos", "ebsco", "proquest", "sciencedirect"],
+    "exclusiones": [],
+    "requiere_contexto": []
+  },
+  {
+    "intent": "catalogo",
+    "palabras": ["buscar libro", "catalogo", "catálogo", "principito", "novela", "autor", "tienen el libro"],
+    "exclusiones": [],
+    "requiere_contexto": []
+  },
+  {
+    "intent": "lockers",
+    "palabras": ["casillero", "locker", "mochila", "mochilas"],
+    "exclusiones": [],
+    "requiere_contexto": []
+  },
+  {
+    "intent": "lockers",
+    "palabras": ["llave"],
+    "exclusiones": ["sala", "estudio", "tesis", "computador"],
+    "requiere_contexto": [],
+    "nota": "Llave sin contexto de sala → lockers"
+  },
+  {
+    "intent": "salas_estudio",
+    "palabras": ["sala", "salas", "cubiculo", "cubículo"],
+    "exclusiones": [],
+    "requiere_contexto": []
+  },
+  {
+    "intent": "salas_estudio",
+    "palabras": ["estudio", "estudiar"],
+    "exclusiones": [],
+    "requiere_contexto": ["reservar", "reserva", "sala", "salas", "llave", "llaves", "pedir"]
+  },
+  {
+    "intent": "tesis",
+    "palabras": ["tesis", "tesina", "trabajo de titulo", "trabajo de título"],
+    "exclusiones": ["sala", "cubículo", "cubiculo", "reservar", "estudio", "tesistas"],
+    "requiere_contexto": []
+  },
+  {
+    "intent": "prestamos",
+    "palabras": ["pedir", "prestar", "prestado", "llevar", "cuantos libros", "renovar", "multa", "moroso", "bloqueado"],
+    "exclusiones": ["sala", "locker", "casillero", "base de datos"],
+    "requiere_contexto": []
+  },
+  {
+    "intent": "prestamos",
+    "palabras": ["pierdo", "perdi", "perdió"],
+    "exclusiones": ["sala", "locker", "casillero", "base de datos"],
+    "requiere_contexto": ["libro", "revista", "computador", "calculadora", "material"],
+    "nota": "Pérdida de material → prestamos"
+  },
+  {
+    "intent": "devolucion",
+    "palabras": ["devolver", "devolucion", "devolución", "entregar el libro", "entregar los libros", "donde dejo el libro"],
+    "exclusiones": [],
+    "requiere_contexto": []
+  },
+  {
+    "intent": "recursos_institucionales",
+    "palabras": ["logotipos", "logo", "manual de estilo", "vancouver", "formato apa", "apa 7", "referencias bibliográficas", "referencia apa", "cita apa", "citar apa", "documentación oficial", "documentacion oficial", "apoyo a trabajos", "trabajos finales"],
+    "exclusiones": [],
+    "requiere_contexto": []
+  },
+  {
+    "intent": "bases_datos",
+    "palabras": ["recuperar clave", "recuperar contraseña", "problemas con la contraseña", "no puedo ingresar", "no puedo entrar", "no me deja entrar", "cambiar mi clave", "cambiar mi contraseña", "contraseña de biblioteca", "clave de biblioteca", "problemas para entrar"],
+    "exclusiones": [],
+    "requiere_contexto": [],
+    "nota": "Problemas de acceso/credenciales → bases_datos"
+  },
+  {
+    "intent": "horario",
+    "palabras": ["horario", "horarios", "atencion", "atención", "abren", "cierran", "abierto", "cerrado", "fin de semana", "fines de semana", "sabado", "sabados", "sábado", "sábados", "domingo", "domingos", "feriado", "feriados"],
+    "exclusiones": [],
+    "requiere_contexto": []
+  }
+]

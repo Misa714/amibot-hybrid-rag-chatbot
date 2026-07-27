@@ -1,0 +1,42 @@
+[
+  {
+    "categoria": "horario",
+    "usuario": "cual es el horario de la biblioteca horario de atencion",
+    "bot": "El horario de atención de la biblioteca es de Lunes a Jueves de 08:00 a 20:00 horas, y los Viernes de 08:00 a 13:00 horas. Los fines de semana y festivos permanece cerrada."
+  },
+  {
+    "categoria": "prestamos",
+    "usuario": "cuantos libros puedo pedir prestados cuantas obras me puedo llevar",
+    "bot": "Los estudiantes pueden solicitar hasta 3 libros de forma simultánea por un plazo de 7 días hábiles. Recuerda presentar tu credencial en el mesón de atención."
+  },
+  {
+    "categoria": "devolucion",
+    "usuario": "como puedo devolver un libro donde entrego los libros",
+    "bot": "Para devolver un libro o material prestado, debes acercarte directamente al mesón de atención de la biblioteca y entregarlo al personal. Recuerda hacerlo dentro del plazo para evitar multas."
+  },
+  {
+    "categoria": "catalogo",
+    "usuario": "como buscar un libro en el catalogo consultar disponibilidad de titulo",
+    "bot": "Para verificar si tenemos un libro o título específico, ingresa a nuestro catálogo en línea en https://catalogo.example.edu/ y busca por título, autor o materia."
+  },
+  {
+    "categoria": "salas_estudio",
+    "usuario": "como reservar una sala de estudio cubiculos para estudiar en grupo",
+    "bot": "Las salas de estudio están disponibles para estudiantes y docentes. Cuentan con mesas, pizarra y enchufes. Debes reservar a través del portal de usuarios en https://reservas.example.edu/ con tu correo institucional."
+  },
+  {
+    "categoria": "wifi",
+    "usuario": "cual es la clave del wifi conectarse a internet en la biblioteca",
+    "bot": "La red WiFi de la biblioteca es 'BiblioGuest'. La contraseña de acceso es campus2026. Recuerda que su uso es exclusivo para fines académicos."
+  },
+  {
+    "categoria": "lockers",
+    "usuario": "como funciona el sistema de lockers guardado de mochilas casilleros",
+    "bot": "Los casilleros están disponibles para el guardado temporal de bolsos y mochilas mientras permaneces en la biblioteca. Solicita la llave en el mesón presentando tu credencial."
+  },
+  {
+    "categoria": "tesis",
+    "usuario": "donde encontrar tesis digitales repositorio academico",
+    "bot": "Las tesis y trabajos de titulación en formato digital están disponibles en el Repositorio Institucional: https://repositorio.example.edu/."
+  }
+]

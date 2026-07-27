@@ -1,0 +1,30 @@
+# Entorno virtual
+venv/
+__pycache__/
+
+# Base de datos de telemetría (contiene datos de usuarios reales)
+consultas.db
+consultas.db-wal
+consultas.db-shm
+
+# Base vectorial (se regenera al iniciar)
+chroma_db/
+chroma_hash.txt
+
+# Logs (pueden contener PII)
+chatbot.log
+*.log
+
+# Backups
+backups/
+
+# Claves y credenciales
+*.pem
+*.key
+.env
+
+# Archivos temporales
+scratch.py
+
+# Reportes generados
+reporte_evaluacion_rag.md
